@@ -1,0 +1,5 @@
+main.cc: Test harness to check all the functions within the Tree and nested
+		Node class.
+		
+BST.h: Contains the Tree and nested Node class. Implements a binary search tree.
+

@@ -1,0 +1,7 @@
+main.cc: includes heapSort function, which is used to implement the heap
+		 sort algorithm in a vector. I decided to have this single function
+		 do everything, as opposed to calling other functions to make it more
+		 readable. I did this since I wasn't sure if we were allowed to split it
+		 up into several functions since the instructions do not specify whether
+		 it wants a single function or not. Preferably, I would have liked to
+		 split it up.

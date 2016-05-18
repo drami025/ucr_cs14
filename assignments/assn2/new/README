@@ -1,0 +1,12 @@
+stack.h: contains the declaration and implementation of the stack class template.
+
+queue.h: contains the declaration and implementation of the queue class template.
+
+WordLadder.h: contains the declaration of the WordLadder class.
+
+WordLadder.cc: contains the implementation of the WordLadder class. The
+			WordLadder class finds the shortest word ladder between two 
+			different 5 letter words. 
+			
+main.cc: Test harness for WordLadder program. Takes 4 command arguments:
+		main.out word5.dict "firstWord" "secondWord"

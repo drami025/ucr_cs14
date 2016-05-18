@@ -1,0 +1,9 @@
+main.cc: My own test harness to test the implementation of my prim function.
+
+prim.h: contains my prim function to return the Minimal Spanning Tree as a 
+		Graph(set of edges). Also contains a simple hashtable class to group
+		edges with similiar vertices in the same hashtable index. Uses chaining
+		for this programs implementation.
+		
+final: A file used to quickly initialize a graph full of edges and respectives
+		weights in my test harness. 

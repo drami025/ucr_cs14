@@ -1,0 +1,132 @@
+#include<iostream>
+
+using namespace std;
+
+class Node{
+    public:
+        Node* next;
+        int num;
+        Node() : next(0) {};
+        Node(int num) : next(0), num(num) {};
+};
+
+class List{
+    private:
+        Node* head;
+        Node* tail;
+        
+    public:
+        List() : head(0), tail(0) {};
+        void push_front(int num);
+        void print() const;
+        //Node* reverse(Node* head);
+        void reverse(Node* ptr);
+        Node* getHead() const;
+};
+
+
+void List::push_front(int num)
+{
+    if(head != 0)
+    {
+        Node* temp = head;
+        head = new Node(num);
+        head->next = temp;
+    }
+    else
+    {
+        head = new Node(num);
+    }
+}
+
+void List::print() const
+{
+    for(Node* i = head; i != 0; i = i->next)
+    {
+        cout << i->num << " ";
+    }
+    
+    cout << endl;
+}
+
+// Node* List::reverse(Node* ptr)
+// {
+//     if(ptr == 0)
+//     {
+//         return 0;
+//     }
+    
+//     if(ptr->next == 0)
+//     {
+//         head = ptr;
+//         return ptr;
+//     }
+    
+//     Node* temp = head;
+    
+//     reverse(ptr->next)->next = ptr;
+    
+//     if(ptr == temp)
+//     {
+//         ptr->next = 0;
+//     }
+    
+//     return ptr;
+// }
+
+void List::reverse(Node* ptr)
+{
+    if(ptr == 0)
+    {
+        return;
+    }
+    
+    if(ptr->next == 0)
+    {
+        head = ptr;
+        return;
+    }
+    
+    Node* temp = head;
+    
+    reverse(ptr->next);
+    
+    if(ptr == temp)
+    {
+        ptr->next = 0;
+        return;
+    }
+    else
+    {
+        ptr->next->next = ptr;
+        return;
+    }
+}
+
+Node* List::getHead() const
+{
+    return head;
+}
+
+int main()
+{
+    
+    List L1;
+    
+    for(int i = 10; i > 0; i--)
+    {
+        L1.push_front(i);
+    }
+    
+    cout << "Before: ";
+    L1.print();
+    cout << endl;
+    
+    L1.reverse(L1.getHead());
+    
+    cout << "After: ";
+    L1.print();
+    cout << endl;
+    
+    return 0;
+}

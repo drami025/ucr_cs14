@@ -1,0 +1,13 @@
+MyList.h: contains the declaration of the MyList class.
+
+MyList.cc: contains the implementation of the main class, MyList. MyList class
+            objects are objects that contain a linked list of dynamically 
+            allocated Node objects.
+            
+MyNode.h: contains the declaration and implementation of the Node class. Each 
+            Node holds two pieces of information: 1) a single ASCII character 
+            and 2) a pointer to a Node, which will point to the next Node in the 
+            linked list of the MyList object.
+            
+main.cc: test harness for the MyList and Node classes. Checks the functionality
+            of all member functions of the MyList class.

@@ -1,0 +1,4 @@
+main.cc: test harness to test my hashmap class. Also has error checking at the
+		end, but it is commented out.
+		
+hashmap.h: declaration and implementation of a hash table. 

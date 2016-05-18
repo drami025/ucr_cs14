@@ -1,0 +1,35 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+void makeVec(vector<int>& myVect)
+{
+	for(unsigned i = 1; i < 51; i++)
+	{
+		myVect.push_back(i);
+	}
+}
+
+int binarySearch(int begin, int end, int num, vector<int> vec)
+{
+		
+		
+		int mid = (end + begin)/2;
+		
+		if(num <= mid)
+			return binarySearch(begin, mid, num, vec);
+		else
+			return binarySearch(mid + 1, end, num, vec);
+}
+
+int main()
+{
+	vector<int> myVect;
+	
+	makeVec(myVect);
+	
+	
+	
+	return 0;
+}

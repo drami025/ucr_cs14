@@ -1,0 +1,48 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+class Node{
+    public:
+        Node* next;
+        int num;
+        Node() : next(0) {};
+        Node(int num) : next(0), num(num) {};
+};
+
+class List{
+    private:
+        Node* head;
+        Node* tail;
+        
+    public:
+        List() : head(0), tail(0) {};
+        void push_front(int num);
+        void print() const;
+};
+
+
+void List::push_front(int num)
+{
+    if(head != 0)
+    {
+        Node* temp = head;
+        head = new Node(num);
+        head->next = temp;
+    }
+    else
+    {
+        head = new Node(num);
+    }
+}
+
+void List::print() const
+{
+    for(Node* i = head; i != 0; i = i->next)
+    {
+        cout << i->num << " ";
+    }
+    
+    cout << endl;
+}
